@@ -1,0 +1,86 @@
+$primary-color: #1f213a;
+$seconday-color: #141625;
+$color: #868cb4;
+$blue: #7c5df9;
+$green: rgb(51, 214, 159);
+$card-border: rgb(146, 119, 255);
+a {
+  text-decoration: none;
+}
+.invoice-card {
+  margin: 10px;
+  background-color: $primary-color;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  height: 90px;
+  border-radius: 9px;
+  .transaction-details {
+    margin-right: auto;
+    font-size: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    .id {
+      font-weight: 800;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .date {
+      color: $color;
+      margin-right: 25px;
+    }
+  }
+  .transaction-status {
+    display: flex;
+    font-size: 12px;
+    color: white;
+    height: 100%;
+    align-items: center;
+    .amount {
+      font-weight: 700;
+      font-size: 18px;
+      margin-right: 25px;
+    }
+    .status {
+      color: $green;
+      font-weight: 700;
+      margin-right: 25px;
+      background-color: rgba(51, 214, 159, 0.06);
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 10px;
+    }
+  }
+}
+
+.invoice-card:hover {
+  border: 1px solid $card-border;
+}
+
+@media screen and (max-width: 700px) {
+  .invoice-card {
+    .transaction-details {
+      flex-direction: column;
+      .id {
+        margin: 5px;
+      }
+      .date {
+        margin: 5px;
+      }
+      .name {
+        margin: 5px;
+      }
+    }
+  }
+  .transaction-status {
+    flex-direction: column;
+    .status {
+      margin: 10px 0;
+    }
+  }
+}

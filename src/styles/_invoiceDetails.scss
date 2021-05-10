@@ -1,0 +1,107 @@
+$primary-color: #1f213a;
+$seconday-color: #141625;
+$button: rgb(37, 41, 69);
+$delete: rgb(236, 87, 87);
+$modal: rgb(30, 33, 57);
+.details-container {
+  width: 100%;
+  max-width: 45rem;
+  margin: 70px auto;
+  a {
+    color: white;
+    font-size: 12px;
+  }
+  .status-btn {
+    color: $green;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: auto;
+    background-color: rgba(51, 214, 159, 0.06);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+  .status-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $primary-color;
+    align-items: center;
+    margin: 50px 0;
+    padding: 25px;
+    border-radius: 15px;
+  }
+  .status-line {
+    color: white;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  .edit-btn {
+    background: $button;
+    outline: none;
+    margin: 0px 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 25px;
+  }
+  .delete-btn {
+    background: $delete;
+    cursor: pointer;
+    outline: none;
+    margin: 0px 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 25px;
+  }
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    transition: all ease-out 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+      color: white;
+      background-color: $modal;
+      max-width: 30rem;
+      border-radius: 12px;
+      margin: 5px;
+      h1 {
+        font-size: 22px;
+        margin: 20px 25px;
+      }
+      p {
+        font-size: 11px;
+        margin: 20px 25px;
+      }
+      .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .btn-close {
+        margin: 20px 25px;
+        padding: 12px 15px;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        background: $delete;
+        color: white;
+        font-weight: 800;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}

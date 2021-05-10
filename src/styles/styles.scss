@@ -1,0 +1,28 @@
+$primary-color: #1f213a;
+$seconday-color: rgb(20, 22, 37);
+$color: #868cb4;
+$blue: #7c5df9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: row;
+}
+body {
+  background-color: $seconday-color;
+}
+@import "./navbar";
+@import "./invoice";
+@import "./invoicecard";
+@import "./invoiceDetails";
+@media screen and (max-width: 700px) {
+  .layout-container {
+    flex-direction: column;
+  }
+}
