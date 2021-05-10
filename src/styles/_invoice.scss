@@ -140,6 +140,11 @@ $blue: #7c5df9;
 }
 @media screen and (max-width: 700px) {
   .invoice-container {
+    margin-top: 5rem;
+    .invoice-header {
+      margin: 0 5px;
+      margin-top: 15px;
+    }
     .form {
       margin-left: 0;
       width: 100vw;
