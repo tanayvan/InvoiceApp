@@ -43,13 +43,13 @@ export default function InvoiceDetails() {
           isOpen
             ? {
                 opacity: 1,
-                zIndex: 10,
-                transition: { duration: 0.1, when: "beforeChildren" },
+                zIndex: 100,
+                transition: { duration: 0, when: "beforeChildren" },
               }
             : {
                 opacity: 0,
                 zIndex: -10,
-                transition: { duration: 0.1, when: "beforeChildren" },
+                transition: { duration: 0.1 },
               }
         }
       >
