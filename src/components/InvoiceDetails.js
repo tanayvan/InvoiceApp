@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export default function InvoiceDetails() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <motion.div
       className="details-container"
@@ -25,7 +26,14 @@ export default function InvoiceDetails() {
       <div className="status-container">
         <div className="status-line">Status</div>
         <div className="status-btn">Paid</div>
-        <button className="edit-btn">Edit</button>
+        <button
+          className="edit-btn"
+          onClick={() => {
+            setIsFormOpen(!isFormOpen);
+          }}
+        >
+          Edit
+        </button>
         <button
           className="delete-btn"
           onClick={() => {
@@ -35,9 +43,31 @@ export default function InvoiceDetails() {
           Delete
         </button>
       </div>
-
+      <div className="invoice-details-container">
+        <div className="id-wrap">
+          <div className="id">#RT3080</div>
+          <div className="city-details">
+            <div className="city">Navsari</div>
+            <div className="country">India</div>
+          </div>
+        </div>
+        <div className="date-wrap">
+          <div className="date">
+            <div className="label">Invoice Date</div>
+            <div className="date">18 Aug 2021</div>
+          </div>
+          <div className="date">
+            <div className="label">Bill To</div>
+            <div className="date">Malhar Lumbhani</div>
+          </div>
+          <div className="date">
+            <div className="label">Sent to</div>
+            <div className="email">malharlumbhani1432@gmail.com</div>
+          </div>
+        </div>
+      </div>
       <motion.div
-        className="backdrop"
+        className="modal-backdrop"
         initial={{ zIndex: -10, opacity: 0 }}
         animate={
           isOpen

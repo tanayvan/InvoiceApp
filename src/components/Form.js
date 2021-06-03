@@ -1,22 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ScrollLock from "react-scrolllock";
 
 export default function Form({ isOpen, setIsOpen }) {
   return (
     <div>
       {setIsOpen && (
-        <motion.div
-          className="backdrop"
-          initial={{ opacity: 0, display: "none" }}
-          animate={
-            isOpen
-              ? { opacity: 1, display: "block" }
-              : { opacity: 0, transition: { delay: 0.1 }, display: "none" }
-          }
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        ></motion.div>
+        <ScrollLock>
+          <motion.div
+            className="backdrop"
+            initial={{ opacity: 0, display: "none" }}
+            animate={
+              isOpen
+                ? { opacity: 1, display: "block" }
+                : { opacity: 0, transition: { delay: 0.1 }, display: "none" }
+            }
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          ></motion.div>
+        </ScrollLock>
       )}
       <motion.div
         className="form"
